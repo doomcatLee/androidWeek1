@@ -9,26 +9,23 @@ import android.widget.Button;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class FirstActivity extends AppCompatActivity implements View.OnClickListener {
 
-
-
-    @Bind(R.id.startButton)
-    Button mStartButton;
-
+    @Bind(R.id.submitButton)
+    Button mSubmitButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_first);
         ButterKnife.bind(this);
-        mStartButton.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v){
-        if (v == mStartButton){
-            Intent intent = new Intent(MainActivity.this, FirstActivity.class);
+        if (v == mSubmitButton){
+            Intent intent = new Intent(FirstActivity.this, ResultActivity.class);
             startActivity(intent);
         }
+
     }
 }
