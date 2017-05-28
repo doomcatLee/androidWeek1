@@ -16,8 +16,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".FIrstActivity" />
-        <activity android:name=".FirstActivity" />
         <activity android:name=".SignUpActivity" />
         <activity android:name=".AdminActivity"></activity>
     </application>

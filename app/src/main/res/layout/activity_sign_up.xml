@@ -18,7 +18,7 @@
 
 
     <EditText
-        android:id="@+id/usernameEditText"
+        android:id="@+id/userNameEditText"
         android:layout_width="348dp"
         android:layout_height="41dp"
         android:ems="10"
@@ -40,10 +40,10 @@
         android:inputType="textPassword"
         tools:layout_editor_absoluteY="214dp"
         tools:layout_editor_absoluteX="19dp"
-        android:layout_below="@+id/usernameEditText"
-        android:layout_alignRight="@+id/usernameEditText"
-        android:layout_alignEnd="@+id/usernameEditText"
-        android:layout_marginTop="34dp" />
+        android:layout_below="@+id/userNameEditText"
+        android:layout_alignRight="@+id/userNameEditText"
+        android:layout_alignEnd="@+id/userNameEditText"
+        android:layout_marginTop="38dp" />
 
     <EditText
         android:id="@+id/passwordConfirmEditText"
@@ -56,10 +56,10 @@
         tools:layout_editor_absoluteX="18dp"
         android:layout_below="@+id/passwordEditText"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="49dp" />
+        android:layout_marginTop="34dp" />
 
     <Button
-        android:id="@+id/SignUpbutton"
+        android:id="@+id/SignUpButton"
         android:layout_width="402dp"
         android:layout_height="59dp"
         android:text="Sign Up"

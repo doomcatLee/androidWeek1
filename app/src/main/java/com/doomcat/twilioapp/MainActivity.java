@@ -5,11 +5,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+    @Bind(R.id.userNameEditText)
+    EditText mUserNameEditText;
+
+    @Bind(R.id.passwordEditText)
+    EditText mPasswordEditText;
 
     @Bind(R.id.signUpButton)
     Button mSignUpButton;
