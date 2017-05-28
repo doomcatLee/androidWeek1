@@ -4,9 +4,12 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -32,6 +35,16 @@ public class AdminActivity extends AppCompatActivity implements View.OnClickList
 
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, users);
         mContentListView.setAdapter(adapter);
+
+        mContentListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                String userName = "You clicked " + ((TextView)view).getText().toString() + "!";
+                Toast.makeText(AdminActivity.this, userName, Toast.LENGTH_LONG).show();
+            }
+        });
+
+
     }
 
     @Override
