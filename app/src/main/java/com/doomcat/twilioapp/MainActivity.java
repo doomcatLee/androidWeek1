@@ -11,8 +11,6 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-
-
     @Bind(R.id.signUpButton)
     Button mSignUpButton;
 
@@ -25,6 +23,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         mSignUpButton.setOnClickListener(this);
+        mLogInButton.setOnClickListener(this);
     }
 
     @Override
