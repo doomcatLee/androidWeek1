@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
 
-    @Bind(R.id.startButton)
+    @Bind(R.id.signUpButton)
     Button mStartButton;
 
     @Override
@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onClick(View v){
         if (v == mStartButton){
-            Intent intent = new Intent(MainActivity.this, FirstActivity.class);
+            Intent intent = new Intent(MainActivity.this, AdminActivity.class);
             startActivity(intent);
         }
     }
