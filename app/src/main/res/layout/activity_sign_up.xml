@@ -1,9 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.doomcat.twilioapp.SignUpActivity">
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="186dp"
+        android:layout_height="46dp"
+        android:text="Please fill in the following:"
+        tools:layout_editor_absoluteX="99dp"
+        tools:layout_editor_absoluteY="16dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp" />
 
-</android.support.constraint.ConstraintLayout>
+
+    <EditText
+        android:id="@+id/usernameEditText"
+        android:layout_width="348dp"
+        android:layout_height="41dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Username"
+        tools:layout_editor_absoluteY="124dp"
+        tools:layout_editor_absoluteX="18dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignLeft="@+id/passwordConfirmEditText"
+        android:layout_alignStart="@+id/passwordConfirmEditText"
+        android:layout_marginTop="48dp" />
+
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="347dp"
+        android:layout_height="38dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        tools:layout_editor_absoluteY="214dp"
+        tools:layout_editor_absoluteX="19dp"
+        android:layout_below="@+id/usernameEditText"
+        android:layout_alignRight="@+id/usernameEditText"
+        android:layout_alignEnd="@+id/usernameEditText"
+        android:layout_marginTop="34dp" />
+
+    <EditText
+        android:id="@+id/passwordConfirmEditText"
+        android:layout_width="348dp"
+        android:layout_height="41dp"
+        android:ems="10"
+        android:hint="Confrim Password"
+        android:inputType="textPassword"
+        tools:layout_editor_absoluteY="298dp"
+        tools:layout_editor_absoluteX="18dp"
+        android:layout_below="@+id/passwordEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="49dp" />
+
+    <Button
+        android:id="@+id/SignUpbutton"
+        android:layout_width="402dp"
+        android:layout_height="59dp"
+        android:text="Sign Up"
+        tools:layout_editor_absoluteX="-9dp"
+        tools:layout_editor_absoluteY="457dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>

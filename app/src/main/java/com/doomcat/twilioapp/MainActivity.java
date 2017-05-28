@@ -14,20 +14,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     @Bind(R.id.signUpButton)
-    Button mStartButton;
+    Button mSignUpButton;
+
+    @Bind(R.id.logInButton)
+    Button mLogInButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-        mStartButton.setOnClickListener(this);
+        mSignUpButton.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v){
-        if (v == mStartButton){
+        if (v == mLogInButton){
             Intent intent = new Intent(MainActivity.this, AdminActivity.class);
+            startActivity(intent);
+        }
+        if (v == mSignUpButton){
+            Intent intent = new Intent(MainActivity.this, SignUpActivity.class);
             startActivity(intent);
         }
     }

@@ -12,9 +12,8 @@
         android:layout_height="495dp"
         tools:layout_editor_absoluteX="8dp"
         tools:layout_editor_absoluteY="8dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="101dp" />
+        android:layout_above="@+id/submitButton"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:id="@+id/submitButton"
