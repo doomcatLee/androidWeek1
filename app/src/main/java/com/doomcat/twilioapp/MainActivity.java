@@ -14,9 +14,9 @@ import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
-    @Bind(R.id.userNameEditText) EditText mUserNameEditText;
+    @Bind(R.id.userNameEditText1) EditText mUserNameEditText;
 
-    @Bind(R.id.passwordEditText) EditText mPasswordEditText;
+    @Bind(R.id.passwordEditText1) EditText mPasswordEditText;
 
     @Bind(R.id.signUpButton)
     Button mSignUpButton;
@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Bind(R.id.logInButton)
     Button mLogInButton;
 
-    FormValidator fv = new FormValidator();
 
 
     @Override
@@ -34,19 +33,24 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ButterKnife.bind(this);
         mSignUpButton.setOnClickListener(this);
         mLogInButton.setOnClickListener(this);
+
     }
 
     @Override
     public void onClick(View v){
 
+        FormValidator fv = new FormValidator();
 
         if (v == mLogInButton){
+
             if (fv.isEmpty(mUserNameEditText, mPasswordEditText)){
-                System.out.println("Field is empty testing");
-                String message = "Please complete all the fields";
+                String message = "Please complete all the input fields";
                 Toast.makeText(MainActivity.this, message, Toast.LENGTH_LONG).show();
+
             }else{
                 Intent intent = new Intent(MainActivity.this, AdminActivity.class);
+                String test = mUserNameEditText.getText().toString();
+                intent.putExtra("test", test);
                 startActivity(intent);
             }
         }

@@ -27,11 +27,18 @@ public class AdminActivity extends AppCompatActivity implements View.OnClickList
     @Bind(R.id.contentListView)
     ListView mContentListView;
 
+    @Bind(R.id.textView2) TextView mTextView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin);
         ButterKnife.bind(this);
+
+        Intent intent = getIntent();
+        String test = intent.getStringExtra("test");
+        mTextView.setText(test);
+
 
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, users);
         mContentListView.setAdapter(adapter);

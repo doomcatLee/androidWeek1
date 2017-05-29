@@ -48,9 +48,9 @@ public class FormValidatorTest {
     @Test
     public void TestIsEmpty(){
         FormValidator fv1 = new FormValidator();
-        System.out.println(mUserNameEditText.getText().toString());
-        System.out.println(fv1.isEmpty(mUserNameEditText,mPasswordEditText));
-        assertTrue(fv1.isEmpty(mUserNameEditText, mPasswordEditText));
+        String userName = "";
+        String password = "";
+        assertTrue(fv1.isEmpty(userName, password));
 
     }
 
