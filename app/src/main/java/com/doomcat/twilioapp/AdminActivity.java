@@ -2,6 +2,7 @@ package com.doomcat.twilioapp;
 
 import android.content.Intent;
 import android.graphics.Typeface;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,7 +16,7 @@ import android.widget.Toast;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class AdminActivity extends AppCompatActivity implements View.OnClickListener {
+public class AdminActivity extends AppCompatActivity {
     private String[] users = new String[] {
             "Alex",
             "Jane",
@@ -26,14 +27,17 @@ public class AdminActivity extends AppCompatActivity implements View.OnClickList
     };
 
 
-    //test
+    @Bind(R.id.clickButton) Button mClickButton;
     @Bind(R.id.contentListView)
     ListView mContentListView;
 
     @Bind(R.id.textView2) TextView mTextView;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin);
         ButterKnife.bind(this);
@@ -57,11 +61,16 @@ public class AdminActivity extends AppCompatActivity implements View.OnClickList
             }
         });
 
-
+        mClickButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                FragmentManager fm = getSupportFragmentManager();
+                TestFragment fragment = new TestFragment();
+                fragment.show(fm, "fragment_edit_name");
+            }
+        });
     }
 
-    @Override
-    public void onClick(View v){
 
-    }
+
 }
