@@ -18,7 +18,7 @@
 
 
     <EditText
-        android:id="@+id/userNameEditText"
+        android:id="@+id/userNameEditText2"
         android:layout_width="348dp"
         android:layout_height="41dp"
         android:ems="10"
@@ -27,12 +27,12 @@
         tools:layout_editor_absoluteY="124dp"
         tools:layout_editor_absoluteX="18dp"
         android:layout_below="@+id/textView"
-        android:layout_alignLeft="@+id/passwordConfirmEditText"
-        android:layout_alignStart="@+id/passwordConfirmEditText"
+        android:layout_alignLeft="@+id/passwordConfirmEditText2"
+        android:layout_alignStart="@+id/passwordConfirmEditText2"
         android:layout_marginTop="48dp" />
 
     <EditText
-        android:id="@+id/passwordEditText"
+        android:id="@+id/passwordEditText2"
         android:layout_width="347dp"
         android:layout_height="38dp"
         android:ems="10"
@@ -40,13 +40,13 @@
         android:inputType="textPassword"
         tools:layout_editor_absoluteY="214dp"
         tools:layout_editor_absoluteX="19dp"
-        android:layout_below="@+id/userNameEditText"
-        android:layout_alignRight="@+id/userNameEditText"
-        android:layout_alignEnd="@+id/userNameEditText"
+        android:layout_below="@+id/userNameEditText2"
+        android:layout_alignRight="@+id/userNameEditText2"
+        android:layout_alignEnd="@+id/userNameEditText2"
         android:layout_marginTop="38dp" />
 
     <EditText
-        android:id="@+id/passwordConfirmEditText"
+        android:id="@+id/passwordConfirmEditText2"
         android:layout_width="348dp"
         android:layout_height="41dp"
         android:ems="10"
@@ -54,7 +54,7 @@
         android:inputType="textPassword"
         tools:layout_editor_absoluteY="298dp"
         tools:layout_editor_absoluteX="18dp"
-        android:layout_below="@+id/passwordEditText"
+        android:layout_below="@+id/passwordEditText2"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="34dp" />
 

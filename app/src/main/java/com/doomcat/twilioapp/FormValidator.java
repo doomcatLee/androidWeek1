@@ -10,8 +10,8 @@ public class FormValidator {
 
     }
 
-    public Boolean isEmpty(EditText a, EditText b){
-        if (a.getText().toString().length() == 0 || b.getText().toString().length() == 0){
+    public Boolean isEmpty(EditText a, EditText b, EditText c){
+        if (a.getText().toString().length() == 0 || b.getText().toString().length() == 0 || c.getText().toString().length() == 0){
             return true;
         }else{
             return false;

@@ -42,8 +42,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         FormValidator fv = new FormValidator();
 
         if (v == mLogInButton){
-
-            if (fv.isEmpty(mUserNameEditText, mPasswordEditText)){
+            if (fv.isEmpty(mUserNameEditText, mPasswordEditText,mPasswordEditText)){
                 String message = "Please complete all the input fields";
                 Toast.makeText(MainActivity.this, message, Toast.LENGTH_LONG).show();
 
