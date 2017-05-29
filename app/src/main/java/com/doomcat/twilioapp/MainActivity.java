@@ -16,8 +16,6 @@ import butterknife.ButterKnife;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
 
-    @Bind(R.id.textView) TextView mTextView;
-
     @Bind(R.id.userNameEditText1) EditText mUserNameEditText;
 
     @Bind(R.id.passwordEditText1) EditText mPasswordEditText;
@@ -40,7 +38,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Typeface titleFont = Typeface.createFromAsset(getAssets(),"fonts/Drifttype.ttf");
         Typeface robotoFont = Typeface.createFromAsset(getAssets(),"fonts/Roboto-Light.ttf");
 
-        mTextView.setTypeface(titleFont);
         TextView[] fonts = {mUserNameEditText, mPasswordEditText};
         service.setFonts(fonts,robotoFont);
 

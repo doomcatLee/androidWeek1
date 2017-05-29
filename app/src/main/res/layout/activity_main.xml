@@ -7,16 +7,6 @@
     android:background="@android:color/background_light"
     tools:context="com.doomcat.twilioapp.MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:text="Twilio App"
-        android:textSize="50sp" />
-
     <Button
         android:id="@+id/logInButton"
         android:layout_width="370dp"
@@ -57,25 +47,36 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView"
-        android:layout_alignStart="@+id/textView"
+        android:layout_marginTop="38dp"
+        android:text="Don't have an account?"
+        android:layout_marginRight="13dp"
+        android:layout_marginEnd="13dp"
         android:layout_below="@+id/logInButton"
-        android:layout_marginLeft="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="36dp"
-        android:text="Don't have an account?" />
+        android:layout_toLeftOf="@+id/signUpTextView"
+        android:layout_toStartOf="@+id/signUpTextView" />
 
     <TextView
         android:id="@+id/signUpTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView3"
-        android:layout_alignBottom="@+id/textView3"
-        android:layout_alignEnd="@+id/textView"
-        android:layout_alignRight="@+id/textView"
-        android:layout_marginEnd="10dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginEnd="77dp"
+        android:layout_marginRight="77dp"
         android:text="Sign up!"
         android:textColor="?attr/colorControlActivated"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_alignBaseline="@+id/textView3"
+        android:layout_alignBottom="@+id/textView3"
+        android:layout_alignRight="@+id/logInButton"
+        android:layout_alignEnd="@+id/logInButton" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="370dp"
+        android:layout_marginLeft="25dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/userNameEditText1"
+        android:layout_alignLeft="@+id/userNameEditText1"
+        android:layout_alignStart="@+id/userNameEditText1"
+        android:layout_marginBottom="83dp"
+        app:srcCompat="@drawable/title" />
 </RelativeLayout>
