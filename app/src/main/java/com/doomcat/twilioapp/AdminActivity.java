@@ -1,6 +1,7 @@
 package com.doomcat.twilioapp;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -35,9 +36,12 @@ public class AdminActivity extends AppCompatActivity implements View.OnClickList
         setContentView(R.layout.activity_admin);
         ButterKnife.bind(this);
 
+        Typeface robotoFont = Typeface.createFromAsset(getAssets(),"fonts/Roboto-Thin.ttf");
+
         Intent intent = getIntent();
-        String test = intent.getStringExtra("test");
-        mTextView.setText(test);
+        String userName = intent.getStringExtra("userName");
+        mTextView.setText("Welcome back " + userName + "!");
+        mTextView.setTypeface(robotoFont);
 
 
         ArrayAdapter adapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, users);

@@ -1,6 +1,7 @@
 package com.doomcat.twilioapp;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +14,9 @@ import butterknife.Bind;
 import butterknife.ButterKnife;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+
+
+    @Bind(R.id.textView) TextView mTextView;
 
     @Bind(R.id.userNameEditText1) EditText mUserNameEditText;
 
@@ -34,22 +38,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mSignUpButton.setOnClickListener(this);
         mLogInButton.setOnClickListener(this);
 
+        Typeface titleFont = Typeface.createFromAsset(getAssets(),"fonts/Drifttype.ttf");
+        Typeface robotoFont = Typeface.createFromAsset(getAssets(),"fonts/Roboto-Thin.ttf");
+
+        mTextView.setTypeface(titleFont);
+        mUserNameEditText.setTypeface(robotoFont);
+        mPasswordEditText.setTypeface(robotoFont);
+
     }
 
     @Override
     public void onClick(View v){
 
-        FormValidator fv = new FormValidator();
+        AppService service = new AppService();
 
         if (v == mLogInButton){
-            if (fv.isEmpty(mUserNameEditText, mPasswordEditText,mPasswordEditText)){
+            if (service.isInputEmpty(mUserNameEditText, mPasswordEditText,mPasswordEditText)){
                 String message = "Please complete all the input fields";
                 Toast.makeText(MainActivity.this, message, Toast.LENGTH_LONG).show();
 
             }else{
                 Intent intent = new Intent(MainActivity.this, AdminActivity.class);
-                String test = mUserNameEditText.getText().toString();
-                intent.putExtra("test", test);
+                String userName = mUserNameEditText.getText().toString();
+                intent.putExtra("userName", userName);
                 startActivity(intent);
             }
         }
