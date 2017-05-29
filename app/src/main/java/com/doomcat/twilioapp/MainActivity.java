@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+        AppService service = new AppService();
         mSignUpButton.setOnClickListener(this);
         mLogInButton.setOnClickListener(this);
 
@@ -42,8 +43,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Typeface robotoFont = Typeface.createFromAsset(getAssets(),"fonts/Roboto-Thin.ttf");
 
         mTextView.setTypeface(titleFont);
-        mUserNameEditText.setTypeface(robotoFont);
-        mPasswordEditText.setTypeface(robotoFont);
+        TextView[] fonts = {mUserNameEditText, mPasswordEditText};
+        service.setFonts(fonts,robotoFont);
+
 
     }
 

@@ -19,7 +19,6 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     @Bind (R.id.textView)
     TextView mTextView;
 
-
     @Bind (R.id.signUpButton)
     Button mSignUpButton;
 
@@ -31,8 +30,6 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
 
     @Bind (R.id.passwordConfirmEditText2)
     EditText mPasswordConfirmEditText;
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +53,6 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
             if (service.isInputEmpty(mUserNameEditText, mPasswordEditText, mPasswordConfirmEditText)){
                 String message = "Please complete all the input fields";
                 Toast.makeText(SignUpActivity.this, message, Toast.LENGTH_LONG).show();
-
             }else if(!service.passwordMatches(mPasswordEditText, mPasswordConfirmEditText)){
                 String message = "Passwords must match!";
                 Toast.makeText(SignUpActivity.this, message, Toast.LENGTH_LONG).show();
@@ -66,8 +62,6 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                 intent.putExtra("userName", userName);
                 startActivity(intent);
             }
-
-
 
         }
 
