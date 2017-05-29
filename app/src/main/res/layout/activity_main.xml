@@ -4,72 +4,81 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context="com.doomcat.twilioapp.MainActivity">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="40dp"
         android:text="Twilio App"
-        android:textSize="50sp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:textSize="50sp" />
 
     <Button
         android:id="@+id/logInButton"
         android:layout_width="330dp"
-        android:layout_height="wrap_content"
-        android:width="220sp"
-        android:background="@android:color/holo_green_dark"
-        android:text="Log In"
-        android:layout_marginTop="32dp"
-        android:layout_below="@+id/passwordEditText1"
+        android:layout_height="40dp"
         android:layout_alignLeft="@+id/passwordEditText1"
-        android:layout_alignStart="@+id/passwordEditText1" />
+        android:layout_alignStart="@+id/passwordEditText1"
+        android:layout_below="@+id/passwordEditText1"
+        android:layout_marginTop="32dp"
+        android:width="220sp"
+        android:background="@drawable/bg2"
+        android:text="Log In" />
 
     <EditText
         android:id="@+id/userNameEditText1"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="text"
-        android:hint="Username"
         android:layout_above="@+id/passwordEditText1"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:ems="10"
+        android:hint="Username"
+        android:inputType="text"
+        android:textColor="@android:color/white"
+        android:textColorHighlight="@android:color/white"
+        android:textColorHint="@android:color/white" />
 
     <EditText
         android:id="@+id/passwordEditText1"
         android:layout_width="330dp"
         android:layout_height="wrap_content"
-        android:ems="10"
+        android:layout_alignLeft="@+id/userNameEditText1"
+        android:layout_alignStart="@+id/userNameEditText1"
+        android:layout_centerVertical="true"
         android:layout_marginTop="10dp"
+        android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
-        android:layout_centerVertical="true"
-        android:layout_alignLeft="@+id/userNameEditText1"
-        android:layout_alignStart="@+id/userNameEditText1" />
+        android:textColorHint="@android:color/white" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="33dp"
-        android:text="Don't have an account?"
-        android:layout_below="@+id/logInButton"
         android:layout_alignLeft="@+id/textView"
-        android:layout_alignStart="@+id/textView" />
+        android:layout_alignStart="@+id/textView"
+        android:layout_below="@+id/logInButton"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="36dp"
+        android:text="Don't have an account?"
+        android:textColor="@android:color/white" />
 
     <TextView
         android:id="@+id/signUpTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sign up!"
-        android:textStyle="bold"
         android:layout_alignBaseline="@+id/textView3"
         android:layout_alignBottom="@+id/textView3"
-        android:layout_toRightOf="@+id/textView3"
-        android:layout_toEndOf="@+id/textView3"
-        android:layout_marginLeft="14dp"
-        android:layout_marginStart="14dp" />
+        android:layout_alignEnd="@+id/textView"
+        android:layout_alignRight="@+id/textView"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:text="Sign up!"
+        android:textColor="?attr/colorControlActivated"
+        android:textStyle="bold" />
 </RelativeLayout>
