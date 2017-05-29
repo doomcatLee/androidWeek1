@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mLogInButton.setOnClickListener(this);
 
         Typeface titleFont = Typeface.createFromAsset(getAssets(),"fonts/Drifttype.ttf");
-        Typeface robotoFont = Typeface.createFromAsset(getAssets(),"fonts/Roboto-Thin.ttf");
+        Typeface robotoFont = Typeface.createFromAsset(getAssets(),"fonts/Roboto-Light.ttf");
 
         mTextView.setTypeface(titleFont);
         TextView[] fonts = {mUserNameEditText, mPasswordEditText};

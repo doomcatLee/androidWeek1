@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@android:color/background_light"
     tools:context="com.doomcat.twilioapp.MainActivity">
 
     <TextView
@@ -19,32 +19,31 @@
 
     <Button
         android:id="@+id/logInButton"
-        android:layout_width="330dp"
-        android:layout_height="40dp"
+        android:layout_width="370dp"
+        android:layout_height="50dp"
         android:layout_alignLeft="@+id/passwordEditText1"
         android:layout_alignStart="@+id/passwordEditText1"
         android:layout_below="@+id/passwordEditText1"
         android:layout_marginTop="32dp"
         android:width="220sp"
-        android:background="@drawable/bg2"
-        android:text="Log In" />
+        android:background="@android:color/holo_red_light"
+        android:text="Login"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
 
     <EditText
         android:id="@+id/userNameEditText1"
-        android:layout_width="330dp"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:layout_above="@+id/passwordEditText1"
         android:layout_centerHorizontal="true"
         android:ems="10"
         android:hint="Username"
-        android:inputType="text"
-        android:textColor="@android:color/white"
-        android:textColorHighlight="@android:color/white"
-        android:textColorHint="@android:color/white" />
+        android:inputType="text" />
 
     <EditText
         android:id="@+id/passwordEditText1"
-        android:layout_width="330dp"
+        android:layout_width="370dp"
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/userNameEditText1"
         android:layout_alignStart="@+id/userNameEditText1"
@@ -52,8 +51,7 @@
         android:layout_marginTop="10dp"
         android:ems="10"
         android:hint="Password"
-        android:inputType="textPassword"
-        android:textColorHint="@android:color/white" />
+        android:inputType="textPassword" />
 
     <TextView
         android:id="@+id/textView3"
@@ -65,8 +63,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="36dp"
-        android:text="Don't have an account?"
-        android:textColor="@android:color/white" />
+        android:text="Don't have an account?" />
 
     <TextView
         android:id="@+id/signUpTextView"
