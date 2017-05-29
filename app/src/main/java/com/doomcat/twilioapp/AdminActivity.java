@@ -25,6 +25,8 @@ public class AdminActivity extends AppCompatActivity implements View.OnClickList
             "Tiger"
     };
 
+
+    //test
     @Bind(R.id.contentListView)
     ListView mContentListView;
 
