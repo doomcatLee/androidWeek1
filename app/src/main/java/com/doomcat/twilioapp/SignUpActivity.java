@@ -39,7 +39,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         ButterKnife.bind(this);
         mSignUpButton.setOnClickListener(this);
 
-        Typeface robotoFont = Typeface.createFromAsset(getAssets(),"fonts/Roboto-Thin.ttf");
+        Typeface robotoFont = Typeface.createFromAsset(getAssets(),"fonts/Roboto-Light.ttf");
         TextView[] viewList = {mUserNameEditText, mPasswordEditText, mPasswordConfirmEditText,mSignUpButton,mTextView};
         //Set the typeface fonts
         service.setFonts(viewList, robotoFont);

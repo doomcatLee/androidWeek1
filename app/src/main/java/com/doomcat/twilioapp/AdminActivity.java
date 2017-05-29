@@ -42,7 +42,7 @@ public class AdminActivity extends AppCompatActivity {
         setContentView(R.layout.activity_admin);
         ButterKnife.bind(this);
 
-        Typeface robotoFont = Typeface.createFromAsset(getAssets(),"fonts/Roboto-Thin.ttf");
+        Typeface robotoFont = Typeface.createFromAsset(getAssets(),"fonts/Roboto-Light.ttf");
 
         Intent intent = getIntent();
         String userName = intent.getStringExtra("userName");

@@ -16,15 +16,11 @@ import butterknife.ButterKnife;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
 
-    @Bind(R.id.textView) TextView mTextView;
-
     @Bind(R.id.userNameEditText1) EditText mUserNameEditText;
 
     @Bind(R.id.passwordEditText1) EditText mPasswordEditText;
 
-    @Bind(R.id.signUpButton)
-    Button mSignUpButton;
-
+    @Bind(R.id.signUpTextView) TextView mSignUp;
     @Bind(R.id.logInButton)
     Button mLogInButton;
 
@@ -36,13 +32,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         AppService service = new AppService();
-        mSignUpButton.setOnClickListener(this);
+        mSignUp.setOnClickListener(this);
         mLogInButton.setOnClickListener(this);
 
         Typeface titleFont = Typeface.createFromAsset(getAssets(),"fonts/Drifttype.ttf");
-        Typeface robotoFont = Typeface.createFromAsset(getAssets(),"fonts/Roboto-Thin.ttf");
+        Typeface robotoFont = Typeface.createFromAsset(getAssets(),"fonts/Roboto-Light.ttf");
 
-        mTextView.setTypeface(titleFont);
         TextView[] fonts = {mUserNameEditText, mPasswordEditText};
         service.setFonts(fonts,robotoFont);
 
@@ -66,7 +61,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(intent);
             }
         }
-        if (v == mSignUpButton){
+        if (v == mSignUp){
             Intent intent = new Intent(MainActivity.this, SignUpActivity.class);
             startActivity(intent);
         }

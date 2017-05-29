@@ -27,10 +27,11 @@
 
     <Button
         android:id="@+id/clickButton"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/contentListView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15dp"
-        android:text="Click" />
+        android:background="@android:color/holo_orange_light"
+        android:text="Don't click me"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 </RelativeLayout>

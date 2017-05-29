@@ -5,16 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.doomcat.twilioapp.SignUpActivity">
+
     <TextView
         android:id="@+id/textView"
-        android:layout_width="186dp"
+        android:layout_width="260dp"
         android:layout_height="46dp"
-        android:text="Please fill in the following:"
+        android:layout_marginTop="37dp"
+        android:text="Create an account"
+        android:textSize="30sp"
+        android:textStyle="bold"
         tools:layout_editor_absoluteX="99dp"
         tools:layout_editor_absoluteY="16dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp" />
+        android:layout_centerHorizontal="true" />
 
 
     <EditText
@@ -60,14 +63,14 @@
 
     <Button
         android:id="@+id/signUpButton"
-        android:layout_width="402dp"
+        android:layout_width="430dp"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:background="@color/colorAccent"
+        android:background="@android:color/holo_red_light"
         android:text="Sign Up"
-        android:textColor="@android:color/background_dark"
-        tools:layout_editor_absoluteX="-9dp"
-        tools:layout_editor_absoluteY="457dp" />
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white"
+        android:textSize="18sp" />
 </RelativeLayout>
