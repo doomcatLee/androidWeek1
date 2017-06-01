@@ -1,19 +1,25 @@
-package com.doomcat.twilioapp;
+package com.doomcat.twilioapp.Activities;
 
+import android.app.Activity;
+import android.app.ActivityOptions;
 import android.content.Intent;
 import android.graphics.Typeface;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.transition.Explode;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.doomcat.twilioapp.Services.AppService;
+import com.doomcat.twilioapp.R;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends Activity implements View.OnClickListener {
 
 
     @Bind(R.id.userNameEditText1) EditText mUserNameEditText;
@@ -29,6 +35,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().requestFeature(Window.FEATURE_CONTENT_TRANSITIONS);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
         AppService service = new AppService();
@@ -40,8 +47,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         TextView[] fonts = {mUserNameEditText, mPasswordEditText};
         service.setFonts(fonts,robotoFont);
-
-
     }
 
     @Override
@@ -55,10 +60,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Toast.makeText(MainActivity.this, message, Toast.LENGTH_LONG).show();
 
             }else{
+                getWindow().setExitTransition(new Explode());
                 Intent intent = new Intent(MainActivity.this, AdminActivity.class);
                 String userName = mUserNameEditText.getText().toString();
                 intent.putExtra("userName", userName);
-                startActivity(intent);
+                startActivity(intent, ActivityOptions
+                        .makeSceneTransitionAnimation(this).toBundle());
             }
         }
         if (v == mSignUp){

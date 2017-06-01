@@ -1,8 +1,8 @@
-package com.doomcat.twilioapp;
+package com.doomcat.twilioapp.Activities;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
@@ -11,10 +11,13 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.doomcat.twilioapp.Services.AppService;
+import com.doomcat.twilioapp.R;
+
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class SignUpActivity extends AppCompatActivity implements View.OnClickListener{
+public class SignUpActivity extends Activity implements View.OnClickListener{
 
     @Bind (R.id.textView)
     TextView mTextView;
